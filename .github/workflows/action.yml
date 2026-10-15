@@ -1,0 +1,20 @@
+name: Action no1
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  example-job:
+    name: Example job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@4
+
+
+      - name: welcome message
+        run: |
+          echo "Hello from githuuub actions"
